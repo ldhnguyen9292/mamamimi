@@ -1,0 +1,167 @@
+sku,name,mass,category,unit
+R01,Mướp Hương,0,vegetable,g
+R02,Bí Đỏ,0,vegetable,g
+R03,Khoai Lang,0,vegetable,g
+R04,Khoai Tây,0,vegetable,g
+R05,Khoai Mỡ,0,vegetable,g
+R06,Cà Rốt,0,vegetable,g
+R07,Cà Chua Bi,0,vegetable,g
+R08,Đậu Que,0,vegetable,g
+R09,Bí Ngòi,0,vegetable,g
+R10,Bầu,0,vegetable,g
+R11,Cải Thìa,0,vegetable,g
+R12,Cải Xoong,0,vegetable,g
+R13,Cải Ngọt,0,vegetable,g
+R14,Rau Dền,0,vegetable,g
+R15,Rau Ngót,0,vegetable,g
+R16,Tần Ô,0,vegetable,g
+R17,Bó Xôi,0,vegetable,g
+R18,Mồng Tơi,0,vegetable,g
+R19,Đậu Hà Lan,0,vegetable,g
+R20,Hạt Sen,0,vegetable,g
+R21,Rong Biển,0,vegetable,g
+R22,Nấm Rơm,0,vegetable,g
+R23,Bắp Ngọt Hạt,0,vegetable,g
+R24,Bông Cải,0,vegetable,g
+R25,Ớt Chuông,0,vegetable,g
+R26,Măng Tây,0,vegetable,g
+R27,Bắp Non,0,vegetable,g
+R28,Bắp Cải Tím,0,vegetable,g
+R29,Cải Cầu Vồng,0,vegetable,g
+R30,Bông Thiên Lý,0,vegetable,g
+D01,Thịt heo,0,meat,g
+D02,Thịt bò,0,meat,g
+D03,Thịt gà,0,meat,g
+D04,Óc heo,0,meat,g
+D05,Sườn non,0,meat,g
+D06,Gà ác,0,meat,con
+D07,Bồ câu,0,meat,con
+D08,Tim heo,3,meat,g
+D09,Ếch,0,meat,con
+D10,Cua đồng,0,meat,ml
+D11,Lươn,0,meat,g
+D12,Cá hồi,0,meat,g
+D13,Cá lóc,0,meat,g
+D14,Cá rô phi,0,meat,g
+D15,Cá diêu hồng,0,meat,g
+D16,Cá chim trắng,0,meat,g
+D17,Cá bóp,0,meat,g
+D18,Cá basa,0,meat,g
+D19,Cá thu,0,meat,g
+D20,Trứng cá tuyết,0,meat,g
+D21,Cá chẽm,0,meat,g
+D22,Tôm,0,meat,g
+D23,Hàu,0,meat,g
+D24,Mực,0,meat,g
+D25,Sò điệp,0,meat,g
+RN01,Mướp Hương - 40g,40,vegetable,g
+RN02,Bí Đỏ - 40g,40,vegetable,g
+RN03,Khoai Lang - 40g,40,vegetable,g
+RN04,Khoai Tây - 40g,40,vegetable,g
+RN05,Khoai Mỡ - 40g,40,vegetable,g
+RN06,Cà Rốt - 40g,40,vegetable,g
+RN07,Cà Chua Bi - 30g,30,vegetable,g
+RN08,Đậu Que - 30g,30,vegetable,g
+RN09,Bí Ngòi - 40g,40,vegetable,g
+RN10,Bầu - 30g,30,vegetable,g
+RN11,Cải Thìa - 20g,20,vegetable,g
+RN12,Cải Xoong - 20g,20,vegetable,g
+RN13,Cải Ngọt - 30g,30,vegetable,g
+RN14,Rau Dền - 20g,20,vegetable,g
+RN15,Rau Ngót - 20g,20,vegetable,g
+RN16,Tần Ô - 20g,20,vegetable,g
+RN17,Bó Xôi - 20g,20,vegetable,g
+RN18,Mồng Tơi - 20g,20,vegetable,g
+RN19,Đậu Hà Lan - 30g,30,vegetable,g
+RN20,Hạt Sen - 15g,15,vegetable,g
+RN21,Rong Biển - 20g,20,vegetable,g
+RN22,Nấm Rơm - 20g,20,vegetable,g
+RN23,Bắp Ngọt Hạt - 20g,20,vegetable,g
+RN24,Bông Cải - 30g,30,vegetable,g
+RN25,Ớt Chuông - 40g,40,vegetable,g
+RN26,Măng Tây - 30g,30,vegetable,g
+RN27,Bắp Non - 40g,40,vegetable,g
+RN28,Bắp Cải Tím - 60g,60,vegetable,g
+RN29,Cải Cầu Vồng - 20g,20,vegetable,g
+RN30,Bông Thiên Lý - 30g,30,vegetable,g
+RL01,Mướp Hương - 80g,80,vegetable,g
+RL02,Bí Đỏ - 80g,80,vegetable,g
+RL03,Khoai Lang - 80g,80,vegetable,g
+RL04,Khoai Tây - 80g,80,vegetable,g
+RL05,Khoai Mỡ - 80g,80,vegetable,g
+RL06,Cà Rốt - 80g,80,vegetable,g
+RL07,Cà Chua Bi - 60g,60,vegetable,g
+RL08,Đậu Que - 60g,60,vegetable,g
+RL09,Bí Ngòi - 60g,60,vegetable,g
+RL10,Bầu - 60g,60,vegetable,g
+RL11,Cải Thìa - 40g,40,vegetable,g
+RL12,Cải Xoong - 40g,40,vegetable,g
+RL13,Cải Ngọt - 60g,60,vegetable,g
+RL14,Rau Dền - 40g,40,vegetable,g
+RL15,Rau Ngót - 40g,40,vegetable,g
+RL16,Tần Ô - 40g,40,vegetable,g
+RL17,Bó Xôi - 40g,40,vegetable,g
+RL18,Mồng Tơi - 40g,40,vegetable,g
+RL19,Đậu Hà Lan - 40g,40,vegetable,g
+RL20,Hạt Sen - 30g,30,vegetable,g
+RL21,Rong Biển - 40g,40,vegetable,g
+RL22,Nấm Rơm - 40g,40,vegetable,g
+RL23,Bắp Ngọt Hạt - 40g,40,vegetable,g
+RL24,Bông Cải - 60g,60,vegetable,g
+RL25,Ớt Chuông - 80g,80,vegetable,g
+RL26,Măng Tây - 60g,60,vegetable,g
+RL27,Bắp Non - 80g,80,vegetable,g
+RL28,Bắp Cải Tím - 120g,120,vegetable,g
+RL29,Cải Cầu Vồng - 40g,40,vegetable,g
+RL30,Bông Thiên Lý - 40g,40,vegetable,g
+DN01,Thịt heo - 30g,30,meat,g
+DN02,Thịt bò - 30g,30,meat,g
+DN03,Thịt gà - 30g,30,meat,g
+DN04,Óc heo - 30g,30,meat,g
+DN05,Sườn non - 70g,70,meat,g
+DN06,Gà ác - 1/2 con,0.5,meat,con
+DN07,Bồ câu - 1/2 con,0.5,meat,con
+DN08,Tim heo - 30g,30,meat,g
+DN09,Ếch - 1/2 con,0.5,meat,con
+DN10,Cua đồng - 150ml,150,meat,ml
+DN11,Lươn - 40g,40,meat,g
+DN12,Cá hồi - 30g,30,meat,g
+DN13,Cá lóc - 30g,30,meat,g
+DN14,Cá rô phi - 30g,30,meat,g
+DN15,Cá diêu hồng - 30g,30,meat,g
+DN16,Cá chim trắng - 30g,30,meat,g
+DN17,Cá bóp - 30g,30,meat,g
+DN18,Cá basa - 30g,30,meat,g
+DN19,Cá thu - 30g,30,meat,g
+DN20,Trứng cá tuyết - 30g,30,meat,g
+DN21,Cá chẽm - 30g,30,meat,g
+DN22,Tôm - 30g,30,meat,g
+DN23,Hàu - 30g,30,meat,g
+DN24,Mực - 40g,40,meat,g
+DN25,Sò điệp - 30g,30,meat,g
+DL01,Thịt Heo - 50g,50,meat,g 
+DL02,Thịt Bò - 50g,50,meat,g 
+DL03,Thịt Gà - 50g,50,meat,g 
+DL04,Óc Heo - 50g,50,meat,g 
+DL05,Sườn Non - 120g,120,meat,g 
+DL06,Gà Ác - 1 con,1,meat,con
+DL07,Bồ Câu - 1 con,1,meat,con
+DL08,Tim Heo - 50g,50,meat,g 
+DL09,Ếch - 1 con,1,meat,con
+DL10,Cua Đồng - 150ml,150,meat,ml
+DL11,Lươn - 70g,70,meat,g 
+DL12,Cá Hồi - 50g,50,meat,g 
+DL13,Cá Lóc - 50g,50,meat,g 
+DL14,Cá Rô Phi - 50g,50,meat,g 
+DL15,Cá Diêu Hồng - 50g,50,meat,g 
+DL16,Cá Chim Trắng - 50g,50,meat,g 
+DL17,Cá Bóp - 50g,50,meat,g 
+DL18,Cá Basa - 50g,50,meat,g 
+DL19,Cá Thu - 50g,50,meat,g 
+DL20,Trứng Cá Tuyết - 50g,50,meat,g 
+DL21,Cá Chẽm - 50g,50,meat,g 
+DL22,Tôm - 50g,50,meat,g 
+DL23,Hàu - 50g,50,meat,g 
+DL24,Mực - 70g,70,meat,g 
+DL25,Sò Điệp - 50g,50,meat,g 
+

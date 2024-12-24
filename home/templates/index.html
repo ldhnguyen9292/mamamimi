@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %} {% block content %}
+<div class="container">
+  <h1 style="text-align: center; text-transform: uppercase">Current inventory status</h1>
+  {% if product_items %}
+  <table style="width: 100%">
+    <tr>
+      <th>Product Name</th>
+      <th>Order Quantity</th>
+      <th>Stock Quantity</th>
+      <th>Stock Status</th>
+    </tr>
+    {% for key, item in product_items.items %}
+    <tr>
+      <td>{{ key }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ item.stock_quantity }}</td>
+      <td style="color: {% if item.stock_status != 'Ok' %}red{% endif %}">{{ item.stock_status }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>No products found.</p>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mamamimi</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="{% static 'images/logo.jpg' %}" alt="Logo" />
+        <a href="{% url 'home' %}">Mamamimi</a>
+      </div>
+      <div class="user-actions">
+        {% if user.is_authenticated %}
+        <div class="avatar" onclick="toggleMenu()">
+          {{ user.username.0 }}
+          <div class="user-menu">
+            {% if user.is_staff %}
+            <a href="{% url 'inventory_list' %}">Inventory</a>
+            <a href="{% url 'order_list' %}">Orders</a>
+            {% endif %}
+
+            <!-- Break line -->
+            <hr />
+
+            <form method="post" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <button type="submit">Logout</button>
+            </form>
+          </div>
+        </div>
+
+        {% else %}
+        <button class="btn-primary">
+          <a href="{% url 'login' %}">Login</a>
+        </button>
+        {% endif %}
+      </div>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <script>
+      const isLoggedIn = false; // Replace with actual authentication check
+      if (isLoggedIn) {
+        document.getElementById("loginButton").style.display = "none";
+      }
+
+      function toggleMenu() {
+        const userMenu = document.querySelector(".user-menu");
+        userMenu.classList.toggle("visible");
+      }
+    </script>
+  </body>
+</html>

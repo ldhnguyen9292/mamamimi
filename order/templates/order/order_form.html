@@ -1,0 +1,84 @@
+<!-- Order form -->
+
+{% extends 'home/base.html' %} {% block content %}
+<div class="product-form">
+  <form method="post">
+    <h1>Order Details</h1>
+    {% csrf_token %} {{ form.as_p }}
+    <hr />
+
+    <h2 style="margin-top: 10px">Order Items</h2>
+
+    <div id="formset-container">
+      {{ formset.management_form }} {% for form in formset %}
+      <div class="formset-row" style="display: flex; align-items: start; justify-items: center; gap: 10px">
+        <div style="flex-grow: 1">{{ form.as_p }}</div>
+        <button type="button" class="btn btn-danger remove-item" style="height: 40px; width: 100px">Remove</button>
+      </div>
+      {% endfor %}
+    </div>
+    <button type="button" id="add-item" class="btn btn-info">Add Item</button>
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 20px">Save Order</button>
+  </form>
+  <button class="btn-secondary" style="margin-top: 20px">
+    <a href="{% url 'order_list' %}">Back to Orders</a>
+  </button>
+</div>
+
+<script>
+  document.getElementById("add-item").addEventListener("click", function () {
+    const formsetContainer = document.getElementById("formset-container");
+    const totalForms = document.querySelector("#id_items-TOTAL_FORMS");
+    const currentFormCount = parseInt(totalForms.value, 10);
+
+    // Clone the last formset row
+    const newForm = formsetContainer.querySelector(".formset-row:last-child").cloneNode(true);
+
+    // Update the form index
+    const regex = new RegExp(`items-(\\d+)-`, "g");
+    newForm.innerHTML = newForm.innerHTML.replace(regex, `items-${currentFormCount}-`);
+
+    // Clear the input fields in the cloned form
+    Array.from(newForm.querySelectorAll("input, select")).forEach((input) => {
+      input.value = "";
+      if (input.type === "checkbox") {
+        input.checked = false;
+      }
+    });
+
+    // Append the new form to the container
+    formsetContainer.appendChild(newForm);
+
+    // Update the total forms count
+    totalForms.value = currentFormCount + 1;
+
+    // Reattach remove button event listener to the new form
+    attachRemoveEvent(newForm);
+  });
+
+  function attachRemoveEvent(row) {
+    row.querySelector(".remove-item").addEventListener("click", function () {
+      const formsetContainer = document.getElementById("formset-container");
+      const totalForms = document.querySelector("#id_items-TOTAL_FORMS");
+      const currentFormCount = parseInt(totalForms.value, 10);
+
+      // Remove the formset row
+      row.remove();
+
+      // Update form indices for remaining rows
+      Array.from(formsetContainer.querySelectorAll(".formset-row")).forEach((form, index) => {
+        const regex = new RegExp(`items-(\\d+)-`, "g");
+        form.innerHTML = form.innerHTML.replace(regex, `items-${index}-`);
+      });
+
+      // Decrement the total forms count
+      totalForms.value = currentFormCount - 1;
+    });
+  }
+
+  // Attach remove event to existing rows
+  document.querySelectorAll(".formset-row").forEach(attachRemoveEvent);
+</script>
+
+{% endblock %}

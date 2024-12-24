@@ -1,0 +1,55 @@
+{% extends 'home/base.html' %} {% block content %}
+<div class="inventory-list">
+  <h1>Inventory</h1>
+
+  <form method="get" action="{% url 'inventory_search' %}" class="inventory-list_search">
+    <input type="text" name="q" placeholder="Search inventory" value="{{ query }}" />
+    <button type="submit" class="btn-info" style="margin-right: 10px">Search</button>
+    <button class="btn-primary">
+      <a href="{% url 'add_product' %}">Add Product</a>
+    </button>
+  </form>
+
+  <div class="inventory-list_container">
+    {% for group in data %}
+
+    <div class="inventory-list_group" style="">
+      <h2>{{ group.category | capfirst }} Products</h2>
+
+      <table border="1" cellpadding="10" class="{{ group.category }}-category product-row" style="display: table-row">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>SKU</th>
+            <th>Unit</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for product in group.products %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>
+              <a href="{% url 'edit_product' product.id %}">{{ product.name }}</a>
+            </td>
+            <td>{{ product.sku }}</td>
+            <td>{{ product.unit }}</td>
+            <td>
+              <form method="post" action="{% url 'update_product' %}" style="display: inline">
+                {% csrf_token %}
+                <input type="hidden" name="sku" value="{{ product.sku }}" />
+                <input type="number" name="quantity" value="{{ product.quantity }}" min="0" style="width: 60px" />
+                <button type="submit">Update</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

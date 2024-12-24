@@ -1,0 +1,58 @@
+{% extends 'home/base.html' %} {% block content %}
+<section>
+  <h1>Order List</h1>
+
+  <button class="btn-primary">
+    <a href="{% url 'add_order' %}" class="btn btn-primary">Create Order</a>
+  </button>
+  <br /><br />
+
+  {% if orders %}
+  <table class="table table-striped" style="width: 100%">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer Name</th>
+        <th>Delivery Date</th>
+        <th>Items</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for order in orders %}
+      <tr>
+        <td>{{ order.id }}</td>
+        <td>{{ order.customer_name }}</td>
+        <td>{{ order.delivery_date }}</td>
+        <td style="padding: 20px">
+          <table width="100%">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            {% for item in order.order_items %}
+            <tbody>
+              <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+              </tr>
+            </tbody>
+            {% endfor %}
+          </table>
+        </td>
+        <td>
+          <a href="{% url 'edit_order' order.id %}" class="btn btn-warning">Update</a>
+          <a href="{% url 'remove_order' order.id %}" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% else %}
+  <p>No orders found.</p>
+  {% endif %}
+</section>
+{% endblock %}

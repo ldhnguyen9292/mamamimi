@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit",
+    "source.fixAll.json": "explicit",
+    "source.fixAll.yaml": "explicit",
+    "source.fixAll.css": "explicit",
+    "source.fixAll.scss": "explicit",
+    "source.fixAll.html": "explicit",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": "never"
+  },
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false
+}
